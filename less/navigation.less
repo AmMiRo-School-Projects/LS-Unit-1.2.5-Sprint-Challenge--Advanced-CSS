@@ -1,1 +1,31 @@
 // Navigation code here
+
+.nav-container {
+  background-color: @nav-bg;
+  width: 100%;
+  border-bottom: 2px solid @nav-border;
+  .navbar {
+    .flexbox (center, center, column);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      margin: 2% 0;
+      font-size: 4rem;
+    } // closes h1
+
+    nav {
+      .flexbox (space-around, center, row);
+      margin: 1.2% 0;
+      width: 400px;
+      max-width: 100%;
+
+      a {
+        .link (none, @nav-font);
+        font-size: 1.6rem;
+        line-height: 1.4;
+      } // closes a
+    } // closes nav
+  } // closes navbar
+} // closes nav-container
