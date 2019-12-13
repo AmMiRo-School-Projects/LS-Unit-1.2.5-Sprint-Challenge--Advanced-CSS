@@ -4,6 +4,11 @@
   background-color: @nav-bg;
   width: 100%;
   border-bottom: 2px solid @nav-border;
+  position: fixed;
+  top: 0;
+  opacity: 0.9;
+  height: 13vh;
+
   .navbar {
     .flexbox (center, center, column);
     width: 100%;
@@ -17,7 +22,6 @@
 
     nav {
       .flexbox (space-around, center, row);
-      margin: 1.2% 0;
       width: 400px;
       max-width: 100%;
 
@@ -25,6 +29,14 @@
         .link (none, @nav-font);
         font-size: 1.6rem;
         line-height: 1.4;
+        padding: 2%;
+        border: 1px solid @nav-bg;
+
+        &:hover {
+          border: 1px solid @nav-font;
+          border-radius: 10px;
+          padding: 2%;
+        }
       } // closes a
     } // closes nav
   } // closes navbar
